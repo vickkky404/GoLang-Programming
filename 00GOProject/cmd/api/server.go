@@ -1,7 +1,6 @@
 package api
 
 import (
-	"internal/syscall/windows"
 	"net/http"
 
 	"gobackend/internal/routes"
