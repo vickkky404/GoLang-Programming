@@ -17,7 +17,7 @@ type UserHandler struct {
 func NewUserHandler(s *store.UserStore) *UserHandler {
 	return &UserHandler{store: s}
 }
-
+ 
 func (h *UserHandler) GetUsers(w http.ResponseWriter, r *http.Request) {
 	users := h.store.GetAll()
 	utils.JSONResponse(w, http.StatusOK, users)

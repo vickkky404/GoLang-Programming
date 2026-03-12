@@ -1,11 +1,11 @@
 package routes
 
 import (
-	"net/http"
-
+	// "fmt"
 	"gobackend/internal/handlers"
 	"gobackend/internal/middleware"
 	"gobackend/internal/store"
+	"net/http"
 )
 
 func RegisterRoutes(mux *http.ServeMux) {
@@ -19,5 +19,5 @@ func RegisterRoutes(mux *http.ServeMux) {
 	mux.Handle("POST /users", middleware.Logger(http.HandlerFunc(userHandler.CreateUser)))
 	mux.Handle("PUT /users/{id}", middleware.Logger(http.HandlerFunc(userHandler.UpdateUser)))
 	mux.Handle("DELETE /users/{id}", middleware.Logger(http.HandlerFunc(userHandler.DeleteUser)))
-}
 
+}

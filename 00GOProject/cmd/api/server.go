@@ -1,6 +1,7 @@
 package api
 
 import (
+	"internal/syscall/windows"
 	"net/http"
 
 	"gobackend/internal/routes"
@@ -20,4 +21,6 @@ func NewServer() *Server {
 
 func (s *Server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	s.mux.ServeHTTP(w, r)
+	
+
 }
