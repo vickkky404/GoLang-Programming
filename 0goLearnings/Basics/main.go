@@ -18,4 +18,5 @@ func main() {
 
 	//Modulus
 	fmt.Printf(" remainder : %d %% %d = %d\n", x, y, x%y)
+
 }
